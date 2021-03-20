@@ -10,63 +10,24 @@ function incorrectAnswer(message){
         alert('Не правильно! \nПравильный ответ "' + message + '"');
 }
 
-function start(){
-        if(prompt("Компьютер на английском языке...") == 'computer'){
-                correctAnswer();
-        
-        } else {
-                incorrectAnswer('computer');
+
+
+
+var questions = ["Яблоко на английском..." , "Луна на английском..." , "Планета на английском..."];
+var answers = ["Apple" , "Moon" , "Planet"];
+
+
+        questions.forEach(function(Element, Index) {
                 
-        }
+                if (prompt(Element) == answers[Index]){
+                        correctAnswer();
+                } else{
+                        incorrectAnswer(answers[Index]);
+                }
+        });
+
         
-        if(prompt("Звук на английском языке...") == 'sound'){
-                correctAnswer();
+        alert("У вас " + correctAnswers + " правильных ответов и " + incorrectAnswers + " неправильных ответов");
         
-        } else {
-                incorrectAnswer('sound');
-                
-        }
-        
-        if(prompt("Дом на английском языке...") == 'home'){
-                correctAnswer();
-        } else {
-                incorrectAnswer('home');
-        }
-        
-        
-        if(prompt("Ноутбук на английском языке...") == 'laptop'){
-                correctAnswer() 
-            } else {
-                incorrectAnswer('laptop');
-            }
-        if(prompt("ПК на английском языке...") == 'PC'){
-                correctAnswer();
-        
-        } else {
-                incorrectAnswer('PC');
-                
-        }
-        if(prompt("Привет на английском языке...") == 'Hello'){
-                correctAnswer();
-        } else {
-                incorrectAnswer('Hello');
-        }
-        
-        if(prompt("Играть на английском языке...") == 'Play'){
-                correctAnswer();
-        } else {
-                incorrectAnswer('Play');
-        }
-        if(prompt("можно? на английском языке...") == 'Can I?'){
-                correctAnswer();
-        } else {
-                incorrectAnswer('Can I?');
-        }
-        
-        
-        
-            alert('У вас ' + correctAnswers + ' правильных ответов')
-            alert('У вас ' + incorrectAnswers + ' не правильных ответов')
-}
 
 
